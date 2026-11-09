@@ -1,0 +1,26 @@
+@font-face{font-family:Atkinson;src:url(fonts/AtkinsonHyperlegible-Regular.ttf);font-display:swap}
+@font-face{font-family:Atkinson;font-weight:700;src:url(fonts/AtkinsonHyperlegible-Bold.ttf);font-display:swap}
+:root{--metin:#0F1330;--ikincil:#3F4468;--vurgu:#4338CA;--ust:#EEF2FF;--alt:#E0F7F4;--leke1:#A5B4FC;--leke2:#99F6E4;--cam:rgba(255,255,255,.78);--kenar:rgba(255,255,255,.9);--uyari:#9A4A00}
+@media (prefers-color-scheme:dark){:root{--metin:#F1F3FF;--ikincil:#C3C8E8;--vurgu:#A5B4FC;--ust:#0B1026;--alt:#1A1446;--leke1:#4F46E5;--leke2:#0D9488;--cam:rgba(30,36,72,.8);--kenar:rgba(255,255,255,.16);--uyari:#FEC84B}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;color:var(--metin);font:18px/1.6 Atkinson,system-ui,sans-serif;background:linear-gradient(160deg,var(--ust),var(--alt)) fixed}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(40rem 30rem at 10% 0,var(--leke1),transparent 70%),radial-gradient(40rem 30rem at 95% 100%,var(--leke2),transparent 70%)}
+.wrap{max-width:46rem;margin:auto;padding:0 16px}
+a{color:var(--vurgu);text-underline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px}
+.site-header .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between;padding-block:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.2rem;color:var(--metin);text-decoration:none}
+.brand img{border-radius:9px}
+.site-nav{display:flex;gap:16px}
+.site-nav a{padding:10px 2px}.site-nav [aria-current]{font-weight:700;color:var(--metin)}
+main{background:var(--cam);border:1px solid var(--kenar);border-radius:20px;padding:12px 28px 28px!important;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);width:calc(100% - 32px)}
+h1{font-size:2.1rem;line-height:1.2;margin:.7em 0 .3em}
+h2{font-size:1.2rem;margin:1.6em 0 .3em}
+.lead{font-size:1.15rem}.meta{color:var(--ikincil)}
+.card{border:1px solid var(--kenar);border-radius:16px;padding:4px 18px;margin:18px 0;background:var(--cam)}
+.card.warn{border-left:4px solid var(--uyari)}.card.warn h2{margin-top:.7em}
+details{border-top:1px solid var(--kenar);padding:10px 0}
+summary{cursor:pointer;font-weight:700;min-height:28px}
+code{font-size:.92em;overflow-wrap:anywhere}
+.site-footer{color:var(--ikincil);font-size:.92rem;padding-block:18px 36px}.site-footer p{margin:.3em 0}
